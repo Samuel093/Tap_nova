@@ -1,0 +1,70 @@
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: #fff;
+}
+
+/* 🌙 Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .carousel-wrapper {
+    background-color: #1f2937; /* Tailwind's gray-800 */
+  }
+
+  .carousel-item img {
+    filter: grayscale(100%) brightness(0.8);
+  }
+
+  .carousel-item img:hover {
+    filter: grayscale(0%) brightness(1);
+  }
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 5s linear infinite;
+}
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 3rem;
+}
+
+.carousel-item img {
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 30px;
+  }
+}
+
