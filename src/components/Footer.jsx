@@ -5,7 +5,7 @@ import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer id="footer" className="bg-[#0D1117] text-white py-16 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         
         {/* Brand Section */}
         <div className="col-span-1 min-w-0">
