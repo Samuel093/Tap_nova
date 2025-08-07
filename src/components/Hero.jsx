@@ -8,7 +8,7 @@ const Hero = () => {
       id="hero"
       className="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800"
     >
-      <div className="min-h-[90vh] flex flex-col items-center justify-center px-4 py-14 md:px-8 md:py-22 lg:py-26 text-center">
+      <div className="min-h-[90vh] flex flex-col items-center  justify-center px-4 py-14 md:px-8 md:py-22 lg:py-26 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           <a
             href="#services"
-            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-indigo-500 transition"
+            className="inline-block mb-8 bg-indigo-600 text-white mt-5 px-6 py-3 rounded-md text-sm font-medium hover:bg-indigo-500 transition"
           >
             Explore Services
           </a>
@@ -32,10 +32,10 @@ const Hero = () => {
         </motion.div>
 
           {/* Infinite Logo Carousel */}
-        <div className="w-full overflow-x-hidden mt-10 ">
+        <div className="w-full overflow-x-hidden  ">
           <InfiniteLogoCarousel />
         </div>
-        
+
       </div>
     </section>
   );
