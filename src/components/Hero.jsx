@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-        <section
+    <section
       id="hero"
       className="bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800"
     >
@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-xl md:max-w-2xl lg:max-w-4xl"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white leading-tight md:leading-snug">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white leading-tight md:leading-snug break-words">
             Empowering Brands With Innovative Solutions
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
@@ -27,17 +27,15 @@ const Hero = () => {
           >
             Explore Services
           </a>
-
-		 
         </motion.div>
-             {/* Infinite Logo Carousel */}
-      <div className="max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto mt-20">
-        <InfiniteLogoCarousel />
-      </div>
-      </div>
 
+        {/* Infinite Logo Carousel */}
+        <div className="w-full overflow-x-hidden mt-20">
+          <InfiniteLogoCarousel />
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

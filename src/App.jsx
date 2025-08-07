@@ -1,19 +1,18 @@
- import { useEffect, useState } from "react";
- import Navbar from './components/Navbar';
- import Hero from "./components/Hero";
- import Services from "./components/Services";
- import Testimonials from './components/Testimonials';
+import { useEffect, useState } from "react";
+import Navbar from './components/Navbar';
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Testimonials from './components/Testimonials';
 import CaseStudies from "./components/CaseStudies";
 import GetDemoSection from "./components/GetDemoSection";
 import Footer from "./components/Footer";
-import  ContactPopup  from "./components/ContactPopup";
+import ContactPopup from "./components/ContactPopup";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import React, { Suspense } from "react";
 
-
 export default function App() {
   const HeavyComponent = React.lazy(() => import("./components/HeavyComponent"));
-  const [showContact, setShowContact] = useState(false)
+  const [showContact, setShowContact] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') === 'dark';
@@ -21,37 +20,41 @@ export default function App() {
     return false;
   });
 
-  useEffect(() =>{
-    if (darkMode){
+  useEffect(() => {
+    if (darkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-    }else {
+    } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-  },[darkMode]);
-  
+  }, [darkMode]);
+
   return (
-    <div className="font-sans text-gray-800 dark:text-gray-200 dark:bg-gray-900">
-     <Navbar 
-     onContactClick={() => setShowContact(true)}
-     onToggleTheme={() => setDarkMode((prev) => !prev)}
-     darkMode={darkMode}
-     /> 
-     <div>
-     <Hero/>
-         {/* Show fallback while loading */}
-      <Suspense fallback={<div>Loading section...</div>}>
-        <HeavyComponent />
-      </Suspense>
-     <Services/>
-     <Testimonials/>
-     <CaseStudies/>
-     <ContactPopup/>
-     <GetDemoSection/>
-     <Footer/>
-     </div>
-     <ScrollToTopButton/>
+    <div className="font-sans text-gray-800 dark:text-gray-200 dark:bg-gray-900 overflow-x-hidden w-full">
+      <Navbar
+        onContactClick={() => setShowContact(true)}
+        onToggleTheme={() => setDarkMode((prev) => !prev)}
+        darkMode={darkMode}
+      />
+
+      <div>
+        <Hero />
+
+        <Suspense fallback={<div>Loading section...</div>}>
+          <HeavyComponent />
+        </Suspense>
+
+        <Services />
+        <Testimonials />
+        <CaseStudies />
+        <ContactPopup />
+        <GetDemoSection />
+        <Footer />
+      </div>
+
+      <ScrollToTopButton />
     </div>
-  )
+  );
 }
+

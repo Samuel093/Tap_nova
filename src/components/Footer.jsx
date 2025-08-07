@@ -4,12 +4,13 @@ import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-[#0D1117] scroll-mt-24 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <footer id="footer" className="bg-[#0D1117] text-white py-16 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
         {/* Brand Section */}
-        <div className="col-span-1">
-          <h2 className="text-xl font-semibold mb-4">TapNova</h2>
-          <p className="text-gray-400 mb-6">
+        <div className="col-span-1 min-w-0">
+          <h2 className="text-xl font-semibold mb-4 break-words">TapNova</h2>
+          <p className="text-gray-400 mb-6 break-words">
             Powering seamless digital solutions for businesses worldwide. Building secure,
             scalable software that drives growth.
           </p>
@@ -27,18 +28,18 @@ const Footer = () => {
         </div>
 
         {/* Solutions */}
-        <div>
+        <div className="min-w-0">
           <h4 className="font-semibold mb-4">Solutions</h4>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-white transition">Custom Software</a></li>
-            <li><a href="#" className="hover:text-white transition">API Integration</a></li>
-            <li><a href="#" className="hover:text-white transition">Mobile & Web Apps</a></li>
-            <li><a href="#" className="hover:text-white transition">Cloud Solutions</a></li>
+            <li><a href="#" className="hover:text-white transition break-words">Custom Software</a></li>
+            <li><a href="#" className="hover:text-white transition break-words">API Integration</a></li>
+            <li><a href="#" className="hover:text-white transition break-words">Mobile & Web Apps</a></li>
+            <li><a href="#" className="hover:text-white transition break-words">Cloud Solutions</a></li>
           </ul>
         </div>
 
         {/* Company */}
-        <div>
+        <div className="min-w-0">
           <h4 className="font-semibold mb-4">Company</h4>
           <ul className="space-y-2 text-gray-400">
             <li><a href="#about" className="hover:text-white transition">About</a></li>
@@ -49,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/* Resources */}
-        <div>
+        <div className="min-w-0">
           <h4 className="font-semibold mb-4">Resources</h4>
           <ul className="space-y-2 text-gray-400">
             <li><a href="#case-studies" className="hover:text-white transition">Case Studies</a></li>
@@ -60,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="min-w-0">
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-gray-400">
             <li><a href="#contact" className="hover:text-white transition">Contact Us</a></li>

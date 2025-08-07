@@ -45,16 +45,19 @@ const logos = [
   { name: "Gitlab", img: gitlab },
  
 ];
-
 const InfiniteLogoCarousel = () => {
-  const repeatedLogos = [...logos, ...logos]; // Repeat to create infinite illusion
+  const repeatedLogos = [...logos, ...logos]; // Create looping illusion
 
   return (
-    <div className="carousel-wrapper bg-white dark:bg-gray-800">
-      <div className="carousel-track  from-indigo-100 to-white">
+    <div className="carousel-wrapper bg-white dark:bg-gray-800 overflow-hidden w-full">
+      <div className="carousel-track">
         {repeatedLogos.map((logo, index) => (
-          <div className="carousel-item" key={index}>
-            <img src={logo.img} alt={logo.name} />
+          <div className="carousel-item px-6 py-4" key={index}>
+            <img
+              src={logo.img}
+              alt={logo.name}
+              className="h-12 w-auto object-contain"
+            />
           </div>
         ))}
       </div>
