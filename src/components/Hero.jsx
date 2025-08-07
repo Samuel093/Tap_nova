@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-xl md:max-w-2xl lg:max-w-4xl"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-10 mb-6 text-gray-800 dark:text-white leading-tight md:leading-snug break-words">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-20 mb-6 text-gray-800 dark:text-white leading-tight md:leading-snug break-words">
             Empowering Brands With Innovative Solutions
           </h1>
           <p className="'max-w-130px mt-6 text-sm md:text-base text-gray-600 dark:text-gray-300 mb-8">
