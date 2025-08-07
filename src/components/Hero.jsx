@@ -27,12 +27,15 @@ const Hero = () => {
           >
             Explore Services
           </a>
-  {/* Infinite Logo Carousel */}
+
+          
+        </motion.div>
+
+          {/* Infinite Logo Carousel */}
         <div className="w-full overflow-x-hidden mt-10 ">
           <InfiniteLogoCarousel />
         </div>
-          
-        </motion.div>
+        
       </div>
     </section>
   );
