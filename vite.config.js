@@ -12,8 +12,7 @@ export default defineConfig({
           vendor: [
             'react',
             'react-dom',
-            'axios', 
-            'lodash', 
+            'axios',  
             // add other big libs
           ],
         },

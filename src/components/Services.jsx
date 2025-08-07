@@ -1,20 +1,9 @@
-import React, { useState } from "react";
+
 import { motion } from "framer-motion";
 import { services } from "../constants";
 
 const Services = () => {
-  // const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-        
-  //     } catch (error) {
-  //       console.error(error.message)
-        
-  //     }
-  //   }
-  // },[])
   
   return (
     <section id="services" className="py-20 px-6 scroll-mt-24 bg-white
