@@ -94,10 +94,10 @@ const Navbar = ({ onContactClick, onToggleTheme, darkMode }) => {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="md:hidden overflow-hidden bg-white dark:bg-gray-800 border-t
+          className="md:hidden bg-white dark:bg-gray-800 border-t
             border-gray-200 dark:border-gray-700"
         >
-              <div className="flex flex-col overflow-hidden space-y-4 px-6 py-4 text-gray-700 dark:text-gray-300 font-bold">
+              <div className="flex flex-col space-y-4 px-6 py-4 text-gray-700 dark:text-gray-300 font-bold">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
